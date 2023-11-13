@@ -12,7 +12,7 @@ function displayWeather(obj) {
     const uv = document.querySelector(".uv");
     location.textContent = obj.location.name;
     hour.textContent = "Last Updated: " + obj.location.localtime;
-    img.scr = obj.current.condition.icon;
+    img.src = obj.current.condition.icon;
     condition.textContent = obj.current.condition.text;
     temp.textContent = obj.current.temp_c + " C°";
     feel.textContent = obj.current.feelslike_c + " C°";
@@ -21,29 +21,6 @@ function displayWeather(obj) {
     rain.textContent = obj.current.precip_mm + "%";
     wind.textContent = obj.current.wind_kph + " Km/h";
     uv.textContent = obj.current.uv;
-
-
-
-
-    console.log(obj.forecast.forecastday[0].astro.sunrise);
-
-
-
-
-    /*
-     forecast.forecastday[0]
-         astro.
-             sunrise
-             sunset
-         hour
-             [0] (hour equal index)
-             chance_of_rain
-             cloud
-             temp_c
-             wind_kph
- 
-     */
-
 }
 async function getWeather(location) {
     try {
@@ -55,5 +32,10 @@ async function getWeather(location) {
         console.log('Something happen ' + error)
     }
 }
-
+let form = document.querySelector(".input-form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    let input = document.querySelector("#city-input");
+    getWeather(input.value);
+    input.value = "";
+})
 getWeather("dolores hidalgo");

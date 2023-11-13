@@ -8,50 +8,55 @@
     <script type="module" src="main.js" defer></script>
   </head>
   <body>
-    <header class="header">Weather!</header>
+    <header class="header">
+      <img src="./svg/logo.svg" alt="logo" class="logo" />
+      <div>Weather!</div>
+    </header>
     <main class="main">
       <form action="" class="input-form">
         <div class="form-row">
           <label for="city-input">Look for your city!</label>
           <input type="text" name="city-input" id="city-input" />
+          <button class="button">
+            <img src="./svg/search.svg" alt="search" class="buttonImg" />
+          </button>
         </div>
       </form>
       <div class="content">
         <div class="location"></div>
         <div class="currentWeather">
-          <img src="" alt="weather" class="tempImg" />
-          <div class="info">
-            <div class="condition">HI</div>
-            <div class="temp">1</div>
+          <div class="infoOne">
+            <img src="" alt="weather" class="tempImg" />
+            <div class="temp"></div>
+            <div class="condition"></div>
           </div>
           <div class="info">
-            <div>Feels Like:</div>
-            <div class="feel">1</div>
+            <div class="title">Feels Like:</div>
+            <div class="feel"></div>
           </div>
           <div class="info">
-            <div>Humidity:</div>
-            <div class="humidity">1</div>
+            <div class="title">Humidity:</div>
+            <div class="humidity"></div>
           </div>
           <div class="info">
-            <div>Clouds:</div>
-            <div class="cloud">1</div>
+            <div class="title">Clouds:</div>
+            <div class="cloud"></div>
           </div>
           <div class="info">
-            <div>Precipitation:</div>
-            <div class="rain">1</div>
+            <div class="title">Precipitation:</div>
+            <div class="rain"></div>
           </div>
           <div class="info">
-            <div>Wind</div>
-            <div class="wind">1</div>
+            <div class="title">Wind</div>
+            <div class="wind"></div>
           </div>
           <div class="info">
-            <div>UV Level:</div>
-            <div class="uv">1</div>
+            <div class="title">UV Level:</div>
+            <div class="uv"></div>
           </div>
         </div>
         <div class="hour"></div>
       </div>
-      <div class="forecast">This is Hourly</div>
     </main>
     <footer class="footer">
       ©roobbs | <a href="https://github.com/roobbs/weather">Code Source</a>
